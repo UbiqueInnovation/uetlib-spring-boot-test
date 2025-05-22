@@ -1,0 +1,34 @@
+package ch.ubique.backend.test.enabledif;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import ch.ubique.backend.test.tracker.TestExecutionTracker;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+@ExtendWith(SpringExtension.class)
+@ActiveProfiles("profile1")
+@ExtendWith(TestExecutionTracker.class)
+class EnabledIfProfileShouldRunWithMongoTest {
+
+    @BeforeAll
+    static void resetExecutionTracker() {
+        TestExecutionTracker.reset();
+    }
+
+    @Test
+    @EnabledIfProfile("profile1")
+    void mongoTest() {}
+
+    @AfterAll
+    static void verifyExecuted() {
+        assertTrue(
+                TestExecutionTracker.wasExecutedByMethodName("mongoTest"),
+                "mongoTest should have executed");
+    }
+}
