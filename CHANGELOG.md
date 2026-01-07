@@ -5,7 +5,6 @@
 ### Improvements
 
 - Spring Boot 4 Support
-- Add no-op `BuildPropertiesEnvironmentPostProcessor` for tests
 
 ## 1.1.0
 
