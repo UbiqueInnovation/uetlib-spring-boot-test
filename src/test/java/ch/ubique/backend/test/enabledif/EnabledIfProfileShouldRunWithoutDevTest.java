@@ -21,14 +21,14 @@ class EnabledIfProfileShouldRunWithoutDevTest {
         TestExecutionTracker.reset();
     }
 
-    @Test
-    @EnabledIfProfile("!profile2")
-    void noDevTest() {}
-
     @AfterAll
     static void verifyExecuted() {
         assertTrue(
                 TestExecutionTracker.wasExecutedByMethodName("noDevTest"),
                 "noDevTest should have executed");
     }
+
+    @Test
+    @EnabledIfProfile("!profile2")
+    void noDevTest() {}
 }

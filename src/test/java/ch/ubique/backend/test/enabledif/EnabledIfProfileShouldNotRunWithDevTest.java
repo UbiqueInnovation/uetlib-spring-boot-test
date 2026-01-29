@@ -22,16 +22,16 @@ class EnabledIfProfileShouldNotRunWithDevTest {
         TestExecutionTracker.reset();
     }
 
-    @Test
-    @EnabledIfProfile("profile1 & !profile2")
-    void blockedByDevTest() {
-        fail("This test should have been disabled");
-    }
-
     @AfterAll
     static void verifyNotExecuted() {
         assertFalse(
                 TestExecutionTracker.wasExecutedByMethodName("blockedByDevTest"),
                 "blockedByDevTest should NOT have executed");
+    }
+
+    @Test
+    @EnabledIfProfile("profile1 & !profile2")
+    void blockedByDevTest() {
+        fail("This test should have been disabled");
     }
 }

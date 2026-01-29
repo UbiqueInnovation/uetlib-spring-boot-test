@@ -21,14 +21,14 @@ class EnabledIfProfileShouldRunWithDevOrMongoTest {
         TestExecutionTracker.reset();
     }
 
-    @Test
-    @EnabledIfProfile("profile1 | profile2")
-    void devTest() {}
-
     @AfterAll
     static void verifyExecuted() {
         assertTrue(
                 TestExecutionTracker.wasExecutedByMethodName("devTest"),
                 "devTest should have executed");
     }
+
+    @Test
+    @EnabledIfProfile("profile1 | profile2")
+    void devTest() {}
 }
