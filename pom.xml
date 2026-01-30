@@ -16,7 +16,7 @@
     <version>2.0.0-SNAPSHOT</version>
 
     <properties>
-        <uetlib-test.version>2.0.0-alpha.3</uetlib-test.version>
+        <uetlib-test.version>2.0.0-alpha.5</uetlib-test.version>
     </properties>
 
     <dependencies>
