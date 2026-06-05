@@ -5,6 +5,11 @@
 - Null-marked it all
 - Update `uetlib-test` to the latest version
 
+## 2.1.0
+
+- Null-marked it all
+- Update `uetlib` dependecies to the latest version
+
 ## 2.0.0
 
 ### Improvements
