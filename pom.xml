@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>ch.ubique</groupId>
         <artifactId>uetlib-parent</artifactId>
-        <version>2026.05.0</version>
+        <version>2026.06.0</version>
     </parent>
 
     <artifactId>uetlib-spring-boot-test</artifactId>
@@ -16,7 +16,10 @@
     <version>3.0.0-SNAPSHOT</version>
 
     <properties>
-        <uetlib-test.version>2.0.1</uetlib-test.version>
+        <uetlib-test.version>2.1.0</uetlib-test.version>
+
+        <!-- westemeyer version config -->
+        <westemeyer-version-package-name>ch.ubique.backend.spring.boot.test.version</westemeyer-version-package-name>
     </properties>
 
     <dependencies>
@@ -33,6 +36,16 @@
     </dependencies>
 
     <repositories>
+        <repository>
+            <id>ubique-artifactory</id>
+            <name>backend</name>
+            <url>https://artifactory.ubique.ch/artifactory/backend</url>
+        </repository>
+        <repository>
+            <id>ubique-artifactory-virtual</id>
+            <name>ubique</name>
+            <url>https://artifactory.ubique.ch/artifactory/ubique</url>
+        </repository>
         <repository>
             <id>osgeo</id>
             <name>Open Source Geospatial Foundation Repository</name>
