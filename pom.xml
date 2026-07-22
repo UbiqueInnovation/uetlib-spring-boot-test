@@ -20,6 +20,9 @@
 
         <!-- westemeyer version config -->
         <westemeyer-version-package-name>ch.ubique.backend.spring.boot.test.version</westemeyer-version-package-name>
+        <!-- Sonar -->
+        <sonar.projectName>uetlib-spring-boot-test</sonar.projectName>
+        <sonar.coverage.module>uetlib-spring-boot-test</sonar.coverage.module>
     </properties>
 
     <dependencies>
