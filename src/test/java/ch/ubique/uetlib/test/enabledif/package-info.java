@@ -1,4 +1,4 @@
 @NullMarked
-package ch.ubique.backend.test.enabledif;
+package ch.ubique.uetlib.test.enabledif;
 
 import org.jspecify.annotations.NullMarked;
