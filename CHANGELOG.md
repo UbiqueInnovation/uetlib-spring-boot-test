@@ -2,6 +2,8 @@
 
 ## 3.0.0 (unreleased)
 
+- Move profile-condition annotations and extensions to `ch.ubique.uetlib.spring.boot.test.enabledif`.
+
 ### Breaking changes
 
 - Move Java packages from `ch.ubique.backend` to `ch.ubique.uetlib`, including class-name resources. Existing Spring configuration property keys are unchanged.

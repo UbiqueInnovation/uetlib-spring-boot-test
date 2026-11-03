@@ -1,8 +1,9 @@
-package ch.ubique.uetlib.test.enabledif;
+package ch.ubique.uetlib.spring.boot.test.enabledif;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import ch.ubique.uetlib.test.tracker.TestExecutionTracker;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -13,7 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("profile1")
 @ExtendWith(TestExecutionTracker.class)
-class EnabledIfProfileShouldRunWithoutDevTest {
+class EnabledIfProfileShouldRunWithMongoTest {
 
     @BeforeAll
     static void resetExecutionTracker() {
@@ -23,11 +24,11 @@ class EnabledIfProfileShouldRunWithoutDevTest {
     @AfterAll
     static void verifyExecuted() {
         assertTrue(
-                TestExecutionTracker.wasExecutedByMethodName("noDevTest"),
-                "noDevTest should have executed");
+                TestExecutionTracker.wasExecutedByMethodName("mongoTest"),
+                "mongoTest should have executed");
     }
 
     @Test
-    @EnabledIfProfile("!profile2")
-    void noDevTest() {}
+    @EnabledIfProfile("profile1")
+    void mongoTest() {}
 }
