@@ -1,4 +1,4 @@
-package ch.ubique.uetlib.test.enabledif;
+package ch.ubique.uetlib.spring.boot.test.enabledif;
 
 import org.springframework.boot.SpringBootConfiguration;
 

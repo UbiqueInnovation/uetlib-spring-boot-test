@@ -1,9 +1,10 @@
-package ch.ubique.uetlib.test.enabledif;
+package ch.ubique.uetlib.spring.boot.test.enabledif;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import ch.ubique.uetlib.test.tracker.TestExecutionTracker;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

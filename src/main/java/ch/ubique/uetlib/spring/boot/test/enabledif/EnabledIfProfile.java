@@ -1,13 +1,14 @@
-package ch.ubique.uetlib.test.enabledif;
+package ch.ubique.uetlib.spring.boot.test.enabledif;
+
+import org.junit.jupiter.api.condition.EnabledIf;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Profile;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import org.junit.jupiter.api.condition.EnabledIf;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Profile;
 
 /**
  * Extension of {@link Profile} that also enables the test if the specified Spring profile is
