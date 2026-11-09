@@ -1,4 +1,4 @@
-package ch.ubique.backend.test.enabledif;
+package ch.uetlib.spring.boot.test.enabledif;
 
 import org.junit.jupiter.api.condition.EnabledIf;
 import org.junit.jupiter.api.extension.ExtendWith;
